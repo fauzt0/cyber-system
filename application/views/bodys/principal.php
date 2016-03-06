@@ -10,8 +10,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://192.168.100.45/">
-      <img src="http://192.168.100.45/conten/img/logo.png" style="width:170px;">
+      <a class="navbar-brand" href="http://localhost/cyber-system/">
+      <img src="http://localhost/cyber-system/conten/img/logo.png" style="width:170px;">
       <!--Cyber Visión-->
       </a>
     </div>
@@ -103,7 +103,7 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <img src="http://192.168.100.45/conten/img/ojo.png" alt="Clientes frecuentes" class="img-responsive" style="margin-top:12px; margin-right:8px; width:45px;">
+          <img src="http://localhost/cyber-system/conten/img/ojo.png" alt="Clientes frecuentes" class="img-responsive" style="margin-top:12px; margin-right:8px; width:45px;">
         </li>
         <li>
         <h4>
@@ -139,18 +139,16 @@
   <div class="row">
   <!-- links/herramientas izquierdo-->
     <div class="col-xs-10 col-sm-2 col-md-2 col-lg-2 ">
-      <div class="list-group" >
-      
+      <!-- 3 favoritos -->
+      <div class="list-group" >      
         <a href="#" class="list-group-item active">
           3 Más visitados
         </a>
-        <a href="https://consultas.curp.gob.mx/CurpSP/" class="list-group-item">CURP</a>                       
-        <a href="http://www.finanzas.df.gob.mx/formato_lc/lc_new/tenencia/calculo/" class="list-group-item">Tenencia CDMX</a>                
-        <a href="http://www.finanzas.df.gob.mx/sma/consulta_ciudadana.php" class="list-group-item">Multas CDMX</a>                       
-
-        
-        
-      
+        <div id="3favorites">
+          <a href="https://consultas.curp.gob.mx/CurpSP/" class="list-group-item">CURP</a>                       
+          <a href="http://www.finanzas.df.gob.mx/formato_lc/lc_new/tenencia/calculo/" class="list-group-item">Tenencia CDMX</a>  
+          <a href="http://www.finanzas.df.gob.mx/sma/consulta_ciudadana.php" class="list-group-item">Multas CDMX</a>
+        </div>                              
       </div>
 
 
@@ -294,7 +292,7 @@
           <form method="GET" action="http://www.google.com/search">
             <table style="background-color:#fff;" bgcolor="#fff"><tr><td>
               <a href="http://www.google.com/">
-                <img SRC="http://192.168.100.45/conten/img/google.png" border="0" ALT="Google" align="absmiddle" style="width:200px;" >
+                <img SRC="http://localhost/cyber-system/conten/img/google.png" border="0" ALT="Google" align="absmiddle" style="width:200px;" >
               </a>
                 <input TYPE=text name=q size=31 maxlength=255 value="" placeholder="Ingresa aquí tu búsqueda" style="height:50px;"  >
                 <input TYPE=hidden name=hl value=es>
@@ -320,7 +318,7 @@
 
   <div class="col-sm-6 col-md-5">
       <div class="thumbnail">
-        <img src="http://192.168.100.45/conten/img/vid1.png" class="prinIma" alt="Inserta Videos">
+        <img src="http://localhost/cyber-system/conten/img/vid1.png" class="prinIma" alt="Inserta Videos">
         <div class="caption">
           <h3>Bienvenido</h3>
           <p>Aquí encontraras notas interesantes, información, noticias
@@ -335,7 +333,7 @@
 
       <div class="col-sm-6 col-md-5">
       <div class="thumbnail">
-        <img src="http://192.168.100.45/conten/img/vid1.png" class="prinIma" alt="Inserta Videos">
+        <img src="http://localhost/cyber-system/conten/img/vid1.png" class="prinIma" alt="Inserta Videos">
         <div class="caption">
           <h3>Bienvenido</h3>
           <p>Aquí encontraras notas interesantes, información, noticias
@@ -403,41 +401,41 @@
 
 <div class="col-xs-6 col-sm-2 col-md-3 col-lg-1">
         <a href="http://www.youtube.com" class="thumbnail" >
-          <img data-src="holder.js/100%x180" alt="100%x180"  src="http://192.168.100.45/conten/img/you.png" data-holder-rendered="true" style="width: 60px; height:60px;display: block;">
+          <img data-src="holder.js/100%x180" alt="100%x180"  src="http://localhost/cyber-system/conten/img/you.png" data-holder-rendered="true" style="width: 60px; height:60px;display: block;">
           Youtube
         </a>
       </div>
  <div class="col-xs-6 col-sm-2 col-md-3 col-lg-1">
         <a href="https://twitter.com/" class="thumbnail">
-          <img data-src="holder.js/100%x180" alt="100%x180" src="http://192.168.100.45/conten/img/twit.png" data-holder-rendered="true" style=" width: 60px; height:60px;display: block;">
+          <img data-src="holder.js/100%x180" alt="100%x180" src="http://localhost/cyber-system/conten/img/twit.png" data-holder-rendered="true" style=" width: 60px; height:60px;display: block;">
           Twitter
         </a>
       </div>
 
       <div class="col-xs-6 col-sm-2 col-md-3 col-lg-1">
         <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=12&ct=1448334961&rver=6.4.6456.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fmail.live.com%2Fdefault.aspx&lc=3082&id=64855&mkt=es-es&cbcxt=mai" class="thumbnail">
-          <img data-src="holder.js/100%x180" alt="100%x180" src="http://192.168.100.45/conten/img/hot.png" data-holder-rendered="true" style="width: 60px; height:60px; display: block;">
+          <img data-src="holder.js/100%x180" alt="100%x180" src="http://localhost/cyber-system/conten/img/hot.png" data-holder-rendered="true" style="width: 60px; height:60px; display: block;">
           Hotmail
         </a>
       </div>
         
       <div class="col-xs-6 col-sm-2 col-md-3 col-lg-1">
         <a href="http://www.gmail.com" class="thumbnail">
-          <img ata-src="holder.js/100%x180" alt="100%x180" src="http://192.168.100.45/conten/img/gmail.png" data-holder-rendered="true" style=" width: 60px; height:60px; display: block;">
+          <img ata-src="holder.js/100%x180" alt="100%x180" src="http://localhost/cyber-system/conten/img/gmail.png" data-holder-rendered="true" style=" width: 60px; height:60px; display: block;">
           Gmail
         </a>
       </div>
         
         <div class="col-xs-6 col-sm-2 col-md-3 col-lg-1">
         <a href="https://login.yahoo.com/config/mail?&.src=ym&.intl=e1" class="thumbnail">
-          <img data-src="holder.js/100%x180" alt="100%x180" src="http://192.168.100.45/conten/img/yahoomail.png" data-holder-rendered="true" style="width: 60px; height:60px; display: block;">
+          <img data-src="holder.js/100%x180" alt="100%x180" src="http://localhost/cyber-system/conten/img/yahoomail.png" data-holder-rendered="true" style="width: 60px; height:60px; display: block;">
           Yahoomail
         </a>
       </div>
         
         <div class="col-xs-6 col-sm-2 col-md-3 col-lg-1">
         <a href="http://www.facebook.com" class="thumbnail">
-          <img data-src="holder.js/100%x180" alt="100%x180" src="http://192.168.100.45/conten/img/facebook.png" data-holder-rendered="true" style=" width: 60px; height:60px; display: block;">
+          <img data-src="holder.js/100%x180" alt="100%x180" src="http://localhost/cyber-system/conten/img/facebook.png" data-holder-rendered="true" style=" width: 60px; height:60px; display: block;">
           Facebook
         </a>
       </div>
@@ -463,7 +461,7 @@
       <div class="carousel-inner" role="listbox">
         
         <div class="item">
-          <img style="width:100%;" data-src=alt="900x500" src="http://192.168.100.45/conten/img/2x1.png" data-holder-rendered="true">
+          <img style="width:100%;" data-src=alt="900x500" src="http://localhost/cyber-system/conten/img/2x1.png" data-holder-rendered="true">
           <div class="carousel-caption" >
             <h3 style="color:#fff;" class="mirror">TODOS LOS MIÉRCOLES</h3>
             <p style="color:red;" class="mirror">
@@ -478,7 +476,7 @@
 
 
         <div class="item">
-          <img style="width:100%;" data-src=alt="900x500" src="http://192.168.100.45/conten/img/SL2.png" data-holder-rendered="true">
+          <img style="width:100%;" data-src=alt="900x500" src="http://localhost/cyber-system/conten/img/SL2.png" data-holder-rendered="true">
           <div class="carousel-caption" >
           <br>
             <h4 class="mirror">Aquí en CYBER VISIÓN</h4>
@@ -486,7 +484,7 @@
         </div>
 
         <div class="item active">
-          <img style="width:100%;" data-src=alt="900x500" src="http://192.168.100.45/conten/img/w7.png" data-holder-rendered="true">          
+          <img style="width:100%;" data-src=alt="900x500" src="http://localhost/cyber-system/conten/img/w7.png" data-holder-rendered="true">          
         </div>
 
 
@@ -540,7 +538,7 @@
   <h5 style="color:#fff;">REDES SOCIALES CYBER VISION:</h5>
 <div class="alert alert-success social_container" role="alert" style=""> 
 
-<a href="https://www.facebook.com/cybervision65/"><img src="http://192.168.100.45/conten/img/face_cyber.png" class="sociales"></a>
+<a href="https://www.facebook.com/cybervision65/"><img src="http://localhost/cyber-system/conten/img/face_cyber.png" class="sociales"></a>
 </div>
 
 

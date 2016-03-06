@@ -56,8 +56,35 @@ class herramientas extends CI_Model {
     	return $error;//0 no tiene error,1 no se pudo insertar un valor,3 campos vacios
     }
 
+    public function load3Favorites(){//consulta los 3 favoritos a la base
+        $baseEstado = $this->revisarBase("favoritos");
+        if($baseEstado != 0){//si la base no esta vacia
+            $this->db->select('nombre,url');
+            $this->db->order_by("posicion","asc");
+            $query = $this->db->get();
+            if($query->num_rows() > 0){//si se pudieron obtener datos
+                $lks[0][0] = 1;//##resultado
+                $lks[0][1] = 1;//##positivo
+                $i=1;
+                $j=0;
+                foreach ($query->result() as $row) {
+                    $j=0;
+                    $lks[$i][$j] = $row->nombre;
+                    $j++;
+                    $lks[$i][$j] = $row->url;
+                    $i++;
+                }
+            }else{//error en la consulta
+                $lks[0][0] = 2;//##error en los
+                $lks[0][1] = 2;//##resultados
+            }
+        }else{//si la tabla esta vacia
+            $lks[0][0] = 0;//##resultado
+            $lks[0][1] = 0;//##vacio
+        }
+    }
 
-    /*Funcion que nos indica un true si una tabla esta llena o 0 si esta vacía*/
+   /*Funcion que nos indica un true si una tabla esta llena o 0 si esta vacía*/
     private function revisarBase($tabla){
     	$query = $this->db->get($tabla);
     	if($query->num_rows() > 0){

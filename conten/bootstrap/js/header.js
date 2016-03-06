@@ -5,7 +5,7 @@ $(document).ready(function()
 
 
 
-function califica()
+function califica()/*comentarios y calificacion del cyber*/
 {	
 	var califica 	= $("#calf").val();
  	var comentario = $("#coment").val();
@@ -22,7 +22,7 @@ function califica()
 		$("#error_comen").empty();//eliminamos mensaje
 		$("#error_comen").fadeOut();
 							 //eliminamos formulario para evitar reenvios
-		$.post('http://localhost/index.php/welcome/comenta',
+		$.post('http://localhost/cyber-system/cyber-system/index.php/welcome/comenta',
 		{
 			'comentario':comentario,
 			'califica':califica,
@@ -52,7 +52,7 @@ function califica()
 }
 
 
-function addfavorite()
+function addfavorite()/*manda los favoritos al modulo para almecenar en base de datos*/
 {
 	var favs 	= [];//nombre de favoritos
 	var lfavs	= [];//link de los favoritos}
@@ -75,7 +75,7 @@ function addfavorite()
 	}
 
 	if(j==0){//si todos los valores estan llenos
-		$.post('http://localhost/index.php/login/addfavorite',
+		$.post('http://localhost/cyber-system/index.php/login/addfavorite',
 		{
 			'favs':favs,
 			'lfavs':lfavs
@@ -110,12 +110,16 @@ function addfavorite()
 	}else{//si no estan llenos los valores
 			$("#errores").empty();
 			$("#errores").append('<div class="alert alert-danger" role="alert" ><strong>ups!</strong>No puedes dejar espacios en blanco.</div>');		
+	}	
+}
 
-	}
-		
+function load3Favorites(){
+	/*traemos en un arreglo los 3 favoritos con sus links*/
+	$.get('http://localhost/cyber-system/index.php/login/load3Favorites',	
+	function(result){
+		alert();
+	});
 
-
-	
 }
 
 

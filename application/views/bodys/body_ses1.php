@@ -48,7 +48,7 @@
 
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-        <img src="http://localhost/conten/img/vid1.png" class="prinIma" alt="Inserta Videos">
+        <img src="http://localhost/cyber-system/conten/img/vid1.png" class="prinIma" alt="Inserta Videos">
         <div class="caption">
           <h3>Agrega multimedia</h3>
           <p>Aquí puedes agregar contenido multimedia en forma de videos
@@ -64,7 +64,7 @@
 
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-        <img src="http://localhost/conten/img/vid1.png" class="prinIma" alt="Inserta Videos">
+        <img src="http://localhost/cyber-system/conten/img/vid1.png" class="prinIma" alt="Inserta Videos">
         <div class="caption">
           <h3>Agrega un post</h3>
           <p>Aquí puedes agregar contenido multimedia en forma de videos

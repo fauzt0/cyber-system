@@ -1,7 +1,7 @@
 <body>
 
 
-	<form action="http://localhost/index.php/login/logear" method="POST">
+	<form action="http://localhost/cyber-system/index.php/login/logear" method="POST">
 		<?php 
 		if(isset($erro_code)){ 			
 			switch($erro_code)

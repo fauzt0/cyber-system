@@ -47,6 +47,13 @@ class Login extends CI_Controller {
 
 	}
 
+	public function load3Favorites(){//llamada de los 3 favoritos a la base
+		$this->load->model('herramientas');
+		$result = $this->herramientas->load3Favorites();
+		/*transformamos los datos a multiarray*/
+		echo json_encode($result);//regresamon el array codificado en json
+	}
+
 	public function addfavorite()//agrega nuevos favoritos(vista)
 	{
 		$logged_in = $this->session->userdata('logged_in');
@@ -195,7 +202,7 @@ public function removeCache()
 	  	{ 	
 	  		$this->session->sess_destroy();
 	  		$this->removeCache();	
-	  		header("location:http://localhost/index.php/login/index");
+	  		header("location:http://192.168.100.45/cyber-system/index.php/login/index");
 	  	}
 	  	else
 	  	{
