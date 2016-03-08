@@ -117,7 +117,7 @@ function load3Favorites(){
 	/*traemos en un arreglo los 3 favoritos con sus links*/
 	$.get('http://localhost/cyber-system/index.php/login/load3Favorites',	
 	function(result){
-		alert();
+		var livs = json
 	});
 
 }
