@@ -114,10 +114,11 @@ function addfavorite()/*manda los favoritos al modulo para almecenar en base de 
 }
 
 function load3Favorites(){
+	alert("hello");
 	/*traemos en un arreglo los 3 favoritos con sus links*/
-	$.get('http://localhost/cyber-system/index.php/login/load3Favorites',	
+	$.post('http://localhost/cyber-system/index.php/login/load3Favorites',	
 	function(result){
-		var livs = json
+		alert("hola");
 	});
 
 }
