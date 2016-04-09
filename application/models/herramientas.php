@@ -60,6 +60,7 @@ class herramientas extends CI_Model {
         $baseEstado = $this->revisarBase("favoritos");
         if($baseEstado != 0){//si la base no esta vacia
             $this->db->select('nombre,url');
+            $this->db->from("favoritos");
             $this->db->order_by("posicion","asc");
             $query = $this->db->get();
             if($query->num_rows() > 0){//si se pudieron obtener datos
@@ -82,6 +83,7 @@ class herramientas extends CI_Model {
             $lks[0][0] = 0;//##resultado
             $lks[0][1] = 0;//##vacio
         }
+        return $lks;
     }
 
    /*Funcion que nos indica un true si una tabla esta llena o 0 si esta vacía*/

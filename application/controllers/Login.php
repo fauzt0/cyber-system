@@ -47,11 +47,11 @@ class Login extends CI_Controller {
 
 	}
 
-	public function load3Favorites(){//llamada de los 3 favoritos a la base
+	public function load3Favorites(){//llamada de los 3 favoritos de la base
 		$this->load->model('herramientas');
 		$result = $this->herramientas->load3Favorites();
 		/*transformamos los datos a multiarray*/
-		echo json_encode($result);//regresamon el array codificado en json
+		echo json_encode($result);//regresamon el array codificado en json		
 	}
 
 	public function addfavorite()//agrega nuevos favoritos(vista)
@@ -182,7 +182,7 @@ class Login extends CI_Controller {
 
 	   if($session_logeado==TRUE)
 	   {
-	   	$this->starter();
+	   	$this->starter();//si se inicia sesion, se manda a la página principal
 	   }
 					
 	}

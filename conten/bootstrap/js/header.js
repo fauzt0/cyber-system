@@ -75,7 +75,7 @@ function addfavorite()/*manda los favoritos al modulo para almecenar en base de 
 	}
 
 	if(j==0){//si todos los valores estan llenos
-		$.post('http://localhost/cyber-system/index.php/login/addfavorite',
+		$.post('http://192.168.100.45/cyber-system/index.php/login/addfavorite',
 		{
 			'favs':favs,
 			'lfavs':lfavs
@@ -113,12 +113,39 @@ function addfavorite()/*manda los favoritos al modulo para almecenar en base de 
 	}	
 }
 
-function load3Favorites(){
-	alert("hello");
+function load3Favorites(){//nos llena la lista de 3 favoritos
+	
 	/*traemos en un arreglo los 3 favoritos con sus links*/
-	$.post('http://localhost/cyber-system/index.php/login/load3Favorites',	
+	$.post('http://192.168.100.45/cyber-system/index.php/login/load3Favorites',	
+	{},
 	function(result){
-		alert("hola");
+		var aray1 = JSON.parse(result);
+		switch(aray1[0][0]){
+			case 0:
+				alert("No se tienen favoritos en la base de datos");
+			break;
+			
+			case 1:
+				var i,j,k;				
+				for(var i=1;i<=3;i++){
+					j=1;
+					k=0;
+					$("#3favorites").append('<a href="'+aray1[i][j]+'" class="list-group-item">'+aray1[i][k]+'</a>');																				
+
+				}
+
+
+			break;
+
+			case 2:
+				alert("Error en la consulta de los 3 favoritos.");
+			break;
+
+			default:
+				alert("No se pueden cargar los 3 Links favoritos. Error desconocido");
+			break;
+		}
+		
 	});
 
 }
