@@ -88,7 +88,35 @@
   </div>
 
   <div class="row">
-    asf
+    
+    <div class="col-sm-6 col-md-3">
+      <div class="list-group">
+        <a href="#" class="list-group-item active">
+          Contraseña WIFI:
+        </a>
+          <div id="favoritos">
+          
+
+            <li class="list-group-item">
+            <LABEL>Contraseña Actual:</LABEL>
+              <input type="text"   id="fav1" disabled="">
+            <LABEL>Nueva Contraseña:</LABEL>
+              <input type="password"  id="wifipass">
+            </li>
+            
+            
+
+            <li class="list-group-item">
+              <input type="button"  class="btn btn-primary" onclick="addwifipass();" value="Guardar Favoritos">
+              <div id="mensaje_fav"></div>
+            </li>
+
+          
+          </div>
+        </div>
+    </div>
+    
+
   </div>
 
 </div>

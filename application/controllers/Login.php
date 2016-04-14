@@ -30,6 +30,27 @@ class Login extends CI_Controller {
 		}		
 	}
 
+
+public function adminUsers()//funcion principal que carga(VISTA)
+	{
+		$logged_in = $this->session->userdata('logged_in');
+		$permiso = $this->session->userdata('level');		
+		if( $logged_in== TRUE  AND($permiso==0))
+	  	{
+
+	  		$this->load->view('headers/header_ses1');
+			$this->load->view('bodys/princ_ses1');
+			$this->load->view('bodys/users_tool1');
+			$this->load->view('footers/footer_ses1');
+
+	  	}else{
+	  		echo "Error 404. Sesión de administracion requerida";
+	  	}
+
+
+	}
+
+
 /*Funciones de usuarios logueados (vistas)*/
 	public function starter()
 	{

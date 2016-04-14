@@ -142,7 +142,7 @@
       <!-- 3 favoritos -->
       <div class="list-group" >      
         <a href="#" class="list-group-item active">
-          3 Más visitados
+        Más visitados: 
         </a>
         <div id="3favorites">
         <script type="text/javascript">load3Favorites();</script>
