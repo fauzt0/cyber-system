@@ -1,9 +1,6 @@
 <div class="container-fluid">
-  
-
 
   <div class="row">
-
     <div class="col-sm-6 col-md-3">
       <div class="list-group">
         <a href="#" class="list-group-item active">
@@ -42,9 +39,6 @@
     
 
  
-
-
-
 
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
@@ -94,24 +88,21 @@
         <a href="#" class="list-group-item active">
           Contraseña WIFI:
         </a>
-          <div id="favoritos">
-          
+          <div id="favoritos">          
 
             <li class="list-group-item">
             <LABEL>Contraseña Actual:</LABEL>
-              <input type="text"   id="fav1" disabled="">
+            <?php 
+              echo '<input type="text"  value="'.$oldWipass.'" id="pass1" disabled="">';
+            ?>              
             <LABEL>Nueva Contraseña:</LABEL>
               <input type="password"  id="wifipass">
-            </li>
+            </li>        
             
-            
-
             <li class="list-group-item">
               <input type="button"  class="btn btn-primary" onclick="addwifipass();" value="Guardar Favoritos">
               <div id="mensaje_fav"></div>
-            </li>
-
-          
+            </li>          
           </div>
         </div>
     </div>

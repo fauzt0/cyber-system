@@ -31,6 +31,55 @@ class Login extends CI_Controller {
 	}
 
 
+	//funciones complementarias
+		
+		/*
+			Singletxtread(nombre_del_archivo.txt)
+			#realiza la lectura de un txt 	
+			#y devuelve una sola cadena
+		*/
+	public function Singletxtread($txtname){		
+		//METER ENCRIPTACION
+  		$fichero ="conten/".$txtname.".txt";//ruta completa carpeta conten + archivo a leer
+  		$exists = file_exists( $fichero );//comprobamos que existe
+
+  		if($exists==true){//si existe	  			
+  			$file = fopen($fichero, "r");//abrimos el archivo con permisos de lectura			
+				$pass = fgets($file);//obtenemos la lectura en una variable			
+			fclose($file);	//cerramos el archivo       
+  		}else{//si no existe
+  			$pass = "NULL";
+  		}  		 
+  		return $pass;	  	
+	}
+
+
+	private function SingletxtWrite($data){
+		$logged_in = $this->session->userdata('logged_in');
+		$permiso = $this->session->userdata('level');		
+		if( $logged_in== TRUE  AND($permiso<=1))//solo usuario root y administrador
+	  	{
+	  		extract($data);//write, file
+	  		//creamos o escribimos en el archivo txt
+	  		$ruta = "conten/".$file.".txt";//asignamos la direccion o ruta
+
+	  		if(($file = fopen($ruta, "w"))!==false){//si se puede crear o abrir el archivo	  			
+				fwrite($file,$write. PHP_EOL);//escribimos la nueva contraseña				
+				fclose($file);
+				return 1;//succesfully
+	  		}else{
+	  			return 0;// no se pudo crear o abrir el archivo
+	  		}  		
+
+	  	}else{
+	  		return -1;//no se inicio sesion o no se tiene permiso
+	  	}
+	}
+
+
+	//fin de funciones complementarias
+
+
 public function adminUsers()//funcion principal que carga(VISTA)
 	{
 		$logged_in = $this->session->userdata('logged_in');
@@ -52,20 +101,25 @@ public function adminUsers()//funcion principal que carga(VISTA)
 
 
 /*Funciones de usuarios logueados (vistas)*/
+
 	public function starter()
 	{
 		$logged_in = $this->session->userdata('logged_in');
 	  	if( $logged_in== TRUE )
 	  	{
+			// carga toda la información de descarga del servidor			
+			$this->load->model('herramientas');/*Cargamos los 3 favoritos*/
+			$oldFavorites = $this->herramientas->load3Favorites();
+			$oldWipass = $this->Singletxtread("wifipass");//hacemos lectura de antigua contraseña wifi
+			$infoToBody["oldWipass"] = $oldWipass;
+	  		//fin carga toda la información de descarga del servidor
+
 			//vistas principales, sesion iniciada..
 			$this->load->view('headers/header_ses1');
 			$this->load->view('bodys/princ_ses1');
-			$this->load->view('bodys/body_ses1');
+			$this->load->view('bodys/body_ses1',$infoToBody);
 			$this->load->view('footers/footer_ses1');
 		}else {echo "Sesión requerida";}//pantalla de error de sesión
-
-		
-
 	}
 
 	public function load3Favorites(){//llamada de los 3 favoritos de la base
@@ -127,6 +181,15 @@ public function adminUsers()//funcion principal que carga(VISTA)
 	}
 
 
+public function wifiEditor(){//funcion de edicion wifi
+	$newWipass = $_POST['newWipass'];
+	$escritura["write"] = $newWipass;//lo que se va a escribir
+	$escritura["file"] 	= "wifipass";//nombre del archivo
+	$result = $this->SingletxtWrite($escritura);//mandamos escribir 
+	echo $result;
+
+
+}
 
 
 /*Fin de funciones de usuarios logueados¡¡¡*/

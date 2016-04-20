@@ -276,7 +276,7 @@
     <!-- fin form opiniones -->
   </div>
   <!-- fin de opiniones -->
-<img style="width:180px; height:95px;" src="http://www.thisiscolossal.com/wp-content/uploads/2015/03/florian-8.gif">
+<img style="width:100%; max-height:120px;" src="https://s1.yimg.com/bt/api/res/1.2/vceFDThEhDN.0YANfmIAkg--/YXBwaWQ9eW5ld3M7cT04NTt3PTUwMA--/http://l.yimg.com/os/publish-images/news/2014-01-02/4984c2f6-459d-4c01-b1cb-f78cc4635101_puntos-colores.gif">
   <span class="text-right mirror" style="color:#fff;">CYBER VISIÓN 2015-2016.</span>  
 
   </div>
@@ -289,33 +289,48 @@
 
 
         <!-- Búsqueda Google -->
-      
-        <center>
-          <form method="GET" action="http://www.google.com/search">
-            <table style="background-color:#fff;" bgcolor="#fff"><tr><td>
-              <a href="http://www.google.com/">
-                <img SRC="http://192.168.100.45/cyber-system/conten/img/google.png" border="0" ALT="Google" align="absmiddle" style="width:200px;" >
-              </a>
-                <input TYPE=text name=q size=31 maxlength=255 value="" placeholder="Ingresa aquí tu búsqueda" style="height:50px;"  >
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            
+              <a class="navbar-brand" href="http://www.google.com.mx" style="position: relative; float: left;">
+                <img alt="Brand" style="width:100px;" src="http://192.168.100.45/cyber-system/conten/img/google.png">
+              </a>  
+              <form method="GET" action="http://www.google.com/search" style="position: relative; float: left; top:8px;">        
+                <input TYPE=text name=q size=41 maxlength=255 value="" placeholder="Ingresa aquí tu búsqueda"   style="height:40px;  " >
                 <input TYPE=hidden name=hl value=es>
-                <input type=submit name=btnG VALUE="Buscar"  style="height:50px;" class="btn-success">
-            </td></tr></table>
+                <button type="submit"  name=btnG VALUE="Buscar" style="height:40px; position:relative; top:-2px;" class="btn btn-danger">
+                Buscar
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+            
           </form>
-        </center>
-      
+
+          </div>
+        </div>
+      </nav>
+
+        
 <!-- Búsqueda Google -->
     
 <!-- center -->
  <div id="center" >
 
-  <div class="col-sm-10 col-md-10" style="margin-bottom:15px;">
-   <span class="label label-default blog_header">Máquinas expendedoras de Japón</span>
-    <div class="embed-responsive embed-responsive-16by9">        
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/GDx2SqvgXfM" frameborder="0" allowfullscreen></iframe>
+
+
+
+  <div class="col-sm-6 col-md-10">
+      <div class="thumbnail">        
+        <div class="caption">
+          <h3>Máquinas expendedoras de Japón</h3>          
+          <div class="embed-responsive embed-responsive-16by9">        
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GDx2SqvgXfM" frameborder="0"  allowfullscreen></iframe>
+          </div>
+          <p><a href="#" class="btn btn-primary" role="button">Continuar...</a>
+           <a href="#" class="btn btn-default" role="button">Compartir</a></p>
+        </div>
+      </div>
     </div>
-  </div>
-
-
 
 
   <div class="col-sm-6 col-md-5">

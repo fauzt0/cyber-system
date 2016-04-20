@@ -151,4 +151,44 @@ function load3Favorites(){//nos llena la lista de 3 favoritos
 }
 
 
+function addwifipass(){//agregas nueva contraseña
 
+	var newWipass = $("#wifipass").val();
+	if(newWipass!=""){//si el campo no esta vacio
+		$.post('http://192.168.100.45/cyber-system/index.php/login/wifiEditor',
+			{
+				'newWipass':newWipass
+			},
+			function(result){
+				var err = parseInt(result);
+				switch(err){
+					case -1:
+						$("#errores").empty();
+						$("#errores").append('<div class="alert alert-danger" role="alert" ><strong>ups! =(</strong>Se necesitan permisos de administrador.</div>');							
+					break;
+
+					case 0:
+						$("#errores").empty();
+						$("#errores").append('<div class="alert alert-danger" role="alert" ><strong>ups! =(</strong>No se pudo crear o abrir el archivo.</div>');							
+					break;
+
+					case 1:
+					$("#errores").empty();
+					$("#errores").append('<div class="alert alert-success" role="alert" ><strong>Finalizado Correctamente.</strong>Se actualizo la contraseña WIFI.</div>');							
+
+					$("#pass1").val(newWipass);//NUEVA contraseña
+					$("#wifipass").val("");
+					break;
+
+					default:
+						$("#errores").empty();
+						$("#errores").append('<div class="alert alert-danger" role="alert" ><strong>ups! =(</strong>Error desconocido, contacta al administrador.</div>'+result);							
+					break;
+				}
+			});
+
+	}else{//si el campo esta vacio
+		$("#errores").empty();
+		$("#errores").append('<div class="alert alert-danger" role="alert" ><strong>ups! =(</strong>No dejar campos vacios.</div>');		
+	}
+}
