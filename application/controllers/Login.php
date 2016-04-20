@@ -39,7 +39,7 @@ class Login extends CI_Controller {
 			#y devuelve una sola cadena
 		*/
 	public function Singletxtread($txtname){		
-		//METER ENCRIPTACION
+		//METER ENCRIPTACION IMPORTANTE
   		$fichero ="conten/".$txtname.".txt";//ruta completa carpeta conten + archivo a leer
   		$exists = file_exists( $fichero );//comprobamos que existe
 
