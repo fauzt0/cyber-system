@@ -20,9 +20,17 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		
+
+		//carga de datos iniciales
+		$this->load->library('lib1');
+		$this->load->model('herramientas');/*Cargamos los 3 favoritos*/
+		//
+		$favoritos3 = $this->herramientas->load3Favorites();
+		//	
+		$data["favoritos3"] = $favoritos3;
+
 		$this->load->view('headers/header1');
-		$this->load->view('bodys/principal');
+		$this->load->view('bodys/principal',$data);
 		$this->load->view('footers/footer1');
 	}
 

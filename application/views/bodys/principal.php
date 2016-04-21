@@ -145,11 +145,34 @@
         Más visitados: 
         </a>
         <div id="3favorites">
-        <script type="text/javascript">load3Favorites();</script>
-          
-         <!-- <a href="https://consultas.curp.gob.mx/CurpSP/" class="list-group-item">CURP</a>                       
-          <a href="http://www.finanzas.df.gob.mx/formato_lc/lc_new/tenencia/calculo/" class="list-group-item">Tenencia CDMX</a>  
-          <a href="http://www.finanzas.df.gob.mx/sma/consulta_ciudadana.php" class="list-group-item">Multas CDMX</a>-->
+        
+          <?php 
+
+            switch ($favoritos3[0][0]) {
+              case 0:    
+                  echo'<a href="#" class="list-group-item">Lista vacia¡</a>';
+                break;
+
+                case 1:    
+                  for ($i=1; $i <=3 ; $i++) { 
+                    $j = 1;
+                    $k = 0
+                  }
+                  echo' <a href="#" class="list-group-item">Lista vacia¡</a>';
+                break;
+
+                case 2:    
+                  echo'<a href="#" class="list-group-item">Error de consulta¡</a>';
+                break;
+              
+              default:
+                  echo'<a href="#" class="list-group-item">Error desconocido:'.$favoritos3[0][0].'¡</a>';
+                break;
+            }
+
+          ?>
+
+       
         </div>                              
       </div>
 

@@ -86,8 +86,7 @@ function addfavorite()/*manda los favoritos al modulo para almecenar en base de 
 				case '0':
 					$("#errores").empty();
 					$("#errores").append('<div class="alert alert-success" role="alert" >Favoritos actualizados exitosamente.</div>');		
-					$("#fav1").val(""); $("#fav2").val(""); $("#fav3").val("");
-					$("#linkfav1").val(""); $("#linkfav2").val(""); $("#linkfav3").val("");
+					
 
 				break;
 
@@ -131,10 +130,7 @@ function load3Favorites(){//nos llena la lista de 3 favoritos
 					j=1;
 					k=0;
 					$("#3favorites").append('<a href="'+aray1[i][j]+'" class="list-group-item">'+aray1[i][k]+'</a>');																				
-
 				}
-
-
 			break;
 
 			case 2:

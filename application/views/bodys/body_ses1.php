@@ -8,25 +8,37 @@
         </a>
           <div id="favoritos">
           <form id="formfavoritos">
+          <!-- Data buffer  -->
+            <?php 
+              switch ($favorites3[0][0]) {
+                case 0:
+                        echo '<li class="list-group-item">No se tienen favoritos en la base de datos</li>';
+                  break;
 
-            <li class="list-group-item">
-              <input type="text" placeholder="Favorito 1" id="fav1" >
-              <br>
-              <input type="text" placeholder="url: " id="linkfav1" style="width:100%;">
-            </li>
-            
-            <li class="list-group-item">
-              <input type="text" placeholder="Favorito 2" id="fav2" >
-              <br>
-              <input type="text" placeholder="url: " id="linkfav2" style="width:100%;">              
-            </li>
-            
-            <li class="list-group-item">
-                <input type="text" placeholder="Favorito 3" id="fav3" >
-              <br>
-              <input type="text" placeholder="url: " id="linkfav3" style="width:100%;">
-            </li>
+                case 1://se despliegan los resultados 
+                      for ($i=1; $i<=3; $i++) { 
+                        $j = 1;//const.
+                        $k = 0;//const.
+                        echo'<li class="list-group-item">';
+                        echo '<label>Favorito'.$i.':</label><input type="text" value="'.$favorites3[$i][$k].'" id="fav'.$i.'" >';//nombre
+                        echo'<br>';
+                        echo '<label>url:</label><input type="text" value="'.$favorites3[$i][$j].'" id="linkfav'.$i.'" style="width:90%;">';//url
+                      }
+                  break;          
 
+                case 2:
+                        echo '<li class="list-group-item">Error de consulta</li>';
+                  break;
+
+                default:
+                  echo '<li class="list-group-item">Error. No se pueden cargar los links</li>';
+                  break;
+              };
+
+            ?>
+
+
+            
             <li class="list-group-item">
               <input type="button"  class="btn btn-primary" onclick="addfavorite();" value="Guardar Favoritos">
               <div id="mensaje_fav"></div>

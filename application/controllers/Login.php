@@ -33,26 +33,7 @@ class Login extends CI_Controller {
 
 	//funciones complementarias
 		
-		/*
-			Singletxtread(nombre_del_archivo.txt)
-			#realiza la lectura de un txt 	
-			#y devuelve una sola cadena
-		*/
-	public function Singletxtread($txtname){		
-		//METER ENCRIPTACION IMPORTANTE
-  		$fichero ="conten/".$txtname.".txt";//ruta completa carpeta conten + archivo a leer
-  		$exists = file_exists( $fichero );//comprobamos que existe
-
-  		if($exists==true){//si existe	  			
-  			$file = fopen($fichero, "r");//abrimos el archivo con permisos de lectura			
-				$pass = fgets($file);//obtenemos la lectura en una variable			
-			fclose($file);	//cerramos el archivo       
-  		}else{//si no existe
-  			$pass = "NULL";
-  		}  		 
-  		return $pass;	  	
-	}
-
+		
 
 	private function SingletxtWrite($data){
 		$logged_in = $this->session->userdata('logged_in');
@@ -109,9 +90,15 @@ public function adminUsers()//funcion principal que carga(VISTA)
 	  	{
 			// carga toda la información de descarga del servidor			
 			$this->load->model('herramientas');/*Cargamos los 3 favoritos*/
-			$oldFavorites = $this->herramientas->load3Favorites();
-			$oldWipass = $this->Singletxtread("wifipass");//hacemos lectura de antigua contraseña wifi
+			$this->load->library('lib1');
+
+			
+			$oldWipass = $this->lib1->Singletxtread("wifipass");//hacemos lectura de antigua contraseña wifi
 			$infoToBody["oldWipass"] = $oldWipass;
+			//
+			$favorites3 = $this->herramientas->load3Favorites();//cargamos los 3 favoritos en multiarray
+			$infoToBody["favorites3"] = $favorites3;
+
 	  		//fin carga toda la información de descarga del servidor
 
 			//vistas principales, sesion iniciada..
