@@ -156,7 +156,8 @@
                 case 1:    
                   for ($i=1; $i <=3 ; $i++) { 
                     $j = 1;
-                    $k = 0
+                    $k = 0;
+                    
                   }
                   echo' <a href="#" class="list-group-item">Lista vacia¡</a>';
                 break;
