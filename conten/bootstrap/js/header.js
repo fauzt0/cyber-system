@@ -22,7 +22,7 @@ function califica()/*comentarios y calificacion del cyber*/
 		$("#error_comen").empty();//eliminamos mensaje
 		$("#error_comen").fadeOut();
 							 //eliminamos formulario para evitar reenvios
-		$.post('http://192.168.100.45/cyber-system/cyber-system/index.php/welcome/comenta',
+		$.post('http://192.168.100.45/cyber-system/index.php/welcome/comenta',
 		{
 			'comentario':comentario,
 			'califica':califica,

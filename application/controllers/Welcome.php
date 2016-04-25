@@ -26,8 +26,11 @@ class Welcome extends CI_Controller {
 		$this->load->model('herramientas');/*Cargamos los 3 favoritos*/
 		//
 		$favoritos3 = $this->herramientas->load3Favorites();
+		$oldWipass = $this->lib1->Singletxtread("wifipass");//hacemos lectura de antigua contraseña wifi
 		//	
 		$data["favoritos3"] = $favoritos3;
+		$data["wifipsw"] = $oldWipass;
+
 
 		$this->load->view('headers/header1');
 		$this->load->view('bodys/principal',$data);

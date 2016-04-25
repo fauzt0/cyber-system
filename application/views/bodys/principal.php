@@ -138,7 +138,7 @@
 
   <div class="row">
   <!-- links/herramientas izquierdo-->
-    <div class="col-xs-10 col-sm-2 col-md-2 col-lg-2 ">
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 ">
       <!-- 3 favoritos -->
       <div class="list-group" >      
         <a href="#" class="list-group-item active">
@@ -157,9 +157,9 @@
                   for ($i=1; $i <=3 ; $i++) { 
                     $j = 1;
                     $k = 0;
-                    
+                    echo' <a href="'.$favoritos3[$i][$j].'" class="list-group-item">'.$favoritos3[$i][$k].'</a>';  
                   }
-                  echo' <a href="#" class="list-group-item">Lista vacia¡</a>';
+                  
                 break;
 
                 case 2:    
@@ -182,12 +182,15 @@
 
   <div class="panel panel-info"> 
     <div class="panel-heading"> 
-      <span class="panel-title luz" id="blink" >WIFI:cyber_vision </span> 
+      <span  class="panel-title luz" id="blink" >WIFI:cyber_vision </span> 
     </div> 
     <div class="panel-body"> 
-      <p>Clave<span class="label label-success"  id="cable">CND6537LOM@</span></p>
+    <?php 
+      echo '<p>Clave<span class="label label-success"  id="cable">'.$wifipsw.'</span></p>';
+    ?>
+      
        
-       <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg2" style="position:relative; float:left;">
+       <button style="width: 90%; font-size: 99%;" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg2" style="position:relative; float:left;">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
           Información WiFI
                   </button>
@@ -301,7 +304,7 @@
   </div>
   <!-- fin de opiniones -->
 <img style="width:100%; max-height:120px;" src="https://s1.yimg.com/bt/api/res/1.2/vceFDThEhDN.0YANfmIAkg--/YXBwaWQ9eW5ld3M7cT04NTt3PTUwMA--/http://l.yimg.com/os/publish-images/news/2014-01-02/4984c2f6-459d-4c01-b1cb-f78cc4635101_puntos-colores.gif">
-  <span class="text-right mirror" style="color:#fff;">CYBER VISIÓN 2015-2016.</span>  
+  
 
   </div>
 
@@ -374,12 +377,14 @@
 
       <div class="col-sm-6 col-md-5">
       <div class="thumbnail">
-        <img src="http://192.168.100.45/cyber-system/conten/img/vid1.png" class="prinIma" alt="Inserta Videos">
+      <br>
+        <img src="http://192.168.100.45/cyber-system/conten/img/promo.png" class="prinIma" alt="Inserta Videos">
         <div class="caption">
-          <h3>Bienvenido</h3>
-          <p>Aquí encontraras notas interesantes, información, noticias
-            y promociones
-
+        
+          <h3>WIFI - Cyber Visión</h3>
+          <p>
+           AHORA puedes conectarte a la red de alta velocidad WIFI para
+           cualquier Dispositivo móvil.
           </p>
           <p><a href="#" class="btn btn-primary" role="button">Continuar...</a>
            <a href="#" class="btn btn-default" role="button">Compartir</a></p>
@@ -419,13 +424,14 @@
   <div class="panel-heading" >  
     <h3 class="panel-title"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"> </span> 
       En <b>Cyber Visión</b> tus datos estan protegidos.
+       <span class="text-right">Cyber Visión 2015-2016</span>
     </h3> 
   </div>
   <div class="panel-body">    
   Todos las noches las máquinas son reiniciadas y toda la información
   almacenada es eliminada, garantizando que los equipos esten libres de virus
   y puedas navegar con toda seguridad.  
-  <b>Cualquier duda consultanos =).</b> 
+  <b>Cualquier duda puedes consultarnos =).</b>
   </div>
 </div>
 
@@ -439,48 +445,48 @@
 
     </div>
 <!--lateral derecho -->
-
-<div class="col-xs-6 col-sm-2 col-md-3 col-lg-1">
-        <a href="http://www.youtube.com" class="thumbnail" >
-          <img data-src="holder.js/100%x180" alt="100%x180"  src="http://192.168.100.45/cyber-system/conten/img/you.png" data-holder-rendered="true" style="width: 60px; height:60px;display: block;">
-          Youtube
-        </a>
-      </div>
- <div class="col-xs-6 col-sm-2 col-md-3 col-lg-1">
-        <a href="https://twitter.com/" class="thumbnail">
-          <img data-src="holder.js/100%x180" alt="100%x180" src="http://192.168.100.45/cyber-system/conten/img/twit.png" data-holder-rendered="true" style=" width: 60px; height:60px;display: block;">
-          Twitter
-        </a>
-      </div>
-
-      <div class="col-xs-6 col-sm-2 col-md-3 col-lg-1">
-        <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=12&ct=1448334961&rver=6.4.6456.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fmail.live.com%2Fdefault.aspx&lc=3082&id=64855&mkt=es-es&cbcxt=mai" class="thumbnail">
-          <img data-src="holder.js/100%x180" alt="100%x180" src="http://192.168.100.45/cyber-system/conten/img/hot.png" data-holder-rendered="true" style="width: 60px; height:60px; display: block;">
-          Hotmail
-        </a>
-      </div>
-        
-      <div class="col-xs-6 col-sm-2 col-md-3 col-lg-1">
-        <a href="http://www.gmail.com" class="thumbnail">
-          <img ata-src="holder.js/100%x180" alt="100%x180" src="http://192.168.100.45/cyber-system/conten/img/gmail.png" data-holder-rendered="true" style=" width: 60px; height:60px; display: block;">
-          Gmail
-        </a>
-      </div>
-        
-        <div class="col-xs-6 col-sm-2 col-md-3 col-lg-1">
-        <a href="https://login.yahoo.com/config/mail?&.src=ym&.intl=e1" class="thumbnail">
-          <img data-src="holder.js/100%x180" alt="100%x180" src="http://192.168.100.45/cyber-system/conten/img/yahoomail.png" data-holder-rendered="true" style="width: 60px; height:60px; display: block;">
-          Yahoomail
-        </a>
-      </div>
-        
-        <div class="col-xs-6 col-sm-2 col-md-3 col-lg-1">
+  <div class="col-xs-6 col-sm-2 col-md-2 col-lg-1">
         <a href="http://www.facebook.com" class="thumbnail">
           <img data-src="holder.js/100%x180" alt="100%x180" src="http://192.168.100.45/cyber-system/conten/img/facebook.png" data-holder-rendered="true" style=" width: 60px; height:60px; display: block;">
-          Facebook
+         <center><span class="btn btn-primary btn-xs" >Facebook</span></center>
         </a>
       </div>
 
+<div class="col-xs-6 col-sm-2 col-md-2 col-lg-1">
+        <a  href="http://www.youtube.com" class="thumbnail" >
+          <img data-src="holder.js/100%x180" alt="100%x180"  src="http://192.168.100.45/cyber-system/conten/img/you.png" data-holder-rendered="true" style="width: 60px; height:60px;display: block;">
+          <center><span class="btn btn-danger btn-xs" >Youtube</span></center>
+        </a>
+      </div>
+ <div class="col-xs-6 col-sm-2 col-md-2 col-lg-1">
+        <a href="https://twitter.com/" class="thumbnail">
+          <img data-src="holder.js/100%x180" alt="100%x180" src="http://192.168.100.45/cyber-system/conten/img/twit.png" data-holder-rendered="true" style=" width: 60px; height:60px;display: block;">
+          <center><span class="btn btn-info btn-xs" >Twitter</span></center>
+        </a>
+      </div>
+
+      <div class="col-xs-6 col-sm-2 col-md-2 col-lg-1">
+        <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=12&ct=1448334961&rver=6.4.6456.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fmail.live.com%2Fdefault.aspx&lc=3082&id=64855&mkt=es-es&cbcxt=mai" class="thumbnail">
+          <img data-src="holder.js/100%x180" alt="100%x180" src="http://192.168.100.45/cyber-system/conten/img/hot.png" data-holder-rendered="true" style="width: 60px; height:60px; display: block;">
+          <center><span class="btn btn-primary btn-xs" >Hotmail</span></center>
+        </a>
+      </div>
+        
+      <div class="col-xs-6 col-sm-2 col-md-2 col-lg-1">
+        <a href="http://www.gmail.com" class="thumbnail">
+          <img ata-src="holder.js/100%x180" alt="100%x180" src="http://192.168.100.45/cyber-system/conten/img/gmail.png" data-holder-rendered="true" style=" width: 60px; height:60px; display: block;">
+       <center><span class="btn btn-danger btn-xs" >Gmail</span></center>
+        </a>
+      </div>
+        
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-1">
+        <a href="https://login.yahoo.com/config/mail?&.src=ym&.intl=e1" class="thumbnail">
+          <img data-src="holder.js/100%x180" alt="100%x180" src="http://192.168.100.45/cyber-system/conten/img/yahoomail.png" data-holder-rendered="true" style="width: 60px; height:60px; display: block;">
+          <center><span class="btn btn-success btn-xs" >Yahoomail</span></center>
+        </a>
+      </div>
+        
+      
 
 
  <div class="col-xs-10 col-sm-3 col-md-3 col-lg-3 ">
