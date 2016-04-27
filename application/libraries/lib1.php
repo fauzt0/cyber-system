@@ -23,5 +23,17 @@ class lib1 {
 	}
 
 
+	public function Pluraltxtread($txtname){//lectura de texto de varias lineas
+		$fichero = "conten/".$txtname.".txt";//ruta completa del fichero
+		$exists = file_exists($fichero);
+
+		if($exists==true){
+			$file = fopen($fichero, "r");//abrimos el fichero con propiedades de lectura
+		}
+
+
+	}
+
+
 
 }

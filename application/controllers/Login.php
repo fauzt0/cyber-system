@@ -58,6 +58,13 @@ class Login extends CI_Controller {
 	}
 
 
+	public function displayComents(){
+		$this->load->library('lib1');
+		$cadena = $this->lib1->Pluraltxtread("comentarios/comentarios");//nombre completo con carpeta contenedora
+		
+	}
+
+
 	//fin de funciones complementarias
 
 
@@ -139,6 +146,7 @@ public function adminUsers()//funcion principal que carga(VISTA)
 		if( $logged_in== TRUE )
 	  	{ 
 	  		$permiso = $this->session->userdata('level');
+	  		$username = $this->session->userdata('level');
 	  		switch ($permiso) {
 	  			case 0:
 	  				echo "Tienes acceso total";

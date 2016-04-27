@@ -17,7 +17,7 @@
       </button>
       <span style="top:15px; position:relative; margin-right:15px; color:red;">Administrador</span>
       <a class="navbar-brand" href="#">
-       	<img src="http://localhost/cyber-system/conten/img/logo.png" style="width:120px; ">
+       	<img src="http://192.168.100.45/cyber-system/conten/img/logo.png" style="width:120px; ">
       	     	
       </a>
 
@@ -26,8 +26,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="http://localhost/cyber-system/index.php/login/index">Inicio <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Nueva entrada+</a></li>
+        <li class="active"><a href="http://192.168.100.45/cyber-system/index.php/login/index">Inicio <span class="sr-only">(current)</span></a></li>       
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Herramientas <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -38,7 +37,7 @@
             <li><a href="#">Mi editor</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Editor web</a></li>
-            <li><a href="http://localhost/cyber-system/index.php/login/addfavorite#">Nuevo Favorito</a></li>
+            <li><a href="http://192.168.100.45/cyber-system/index.php/login/addfavorite#">Nuevo Favorito</a></li>
           </ul>
         </li>
       </ul>
@@ -57,7 +56,7 @@
             <li><a href="#">Acción2</a></li>
             <li><a href="#">Algo más aquí</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="http://localhost/cyber-system/index.php/login/close_session">Cerrar Sesión</a></li>
+            <li><a href="http://192.168.100.45/cyber-system/index.php/login/close_session">Cerrar Sesión</a></li>
           </ul>
         </li>
       </ul>

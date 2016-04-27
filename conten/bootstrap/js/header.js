@@ -188,3 +188,19 @@ function addwifipass(){//agregas nueva contraseña
 		$("#errores").append('<div class="alert alert-danger" role="alert" ><strong>ups! =(</strong>No dejar campos vacios.</div>');		
 	}
 }
+
+/*
+	funcion que muestra tabla con comentarios
+*/
+function showComents(){
+
+	$("#espejo").empty();//vaciamos el contenido principal (espejo constructor)
+	$.get('http://192.168.100.45/cyber-system/index.php/login/showComents',{
+		
+	},
+	function(result){
+
+
+	});
+
+}

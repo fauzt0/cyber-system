@@ -346,6 +346,7 @@
 
 
 
+
   <div class="col-sm-6 col-md-10">
       <div class="thumbnail">        
         <div class="caption">
@@ -489,7 +490,7 @@
       
 
 
- <div class="col-xs-10 col-sm-3 col-md-3 col-lg-3 ">
+ <div class="col-xs-10 col-sm-3 col-md-2 col-lg-3 ">
 
 <!-- -->
 
@@ -503,12 +504,33 @@
         <li data-target="#carousel-example-captions" data-slide-to="0" class=""></li>
         <li data-target="#carousel-example-captions" data-slide-to="1" class=""></li>
         <li data-target="#carousel-example-captions" data-slide-to="2" class=""></li>
+        <li data-target="#carousel-example-captions" data-slide-to="3" class=""></li>
+        <li data-target="#carousel-example-captions" data-slide-to="4" class=""></li>
         
       </ol>
       <div class="carousel-inner" role="listbox">
+
+      <div class="item">
+        <a href="http://www.redzer.tv/2016/04/ver-en-vivo-real-madrid-vs-manchester-city-2016-champions-league-online.html">
+          <img style="width:100%; height: 200px;" data-src=alt="900x500" src="http://192.168.100.45/cyber-system/conten/img/promo1.jpg" data-holder-rendered="true">     
+        </a>
+        <div class="carousel-caption" >
+        Martes 26. 2PM.
+        </div>
+      </div>
+
+      <div class="item active">
+        <a href="http://www.redzer.tv/2016/04/ver-en-vivo-real-madrid-vs-manchester-city-2016-champions-league-online.html">
+          <img style="width:100%; height: 200px;" data-src=alt="900x500" src="http://192.168.100.45/cyber-system/conten/img/dbsuper.jpeg" data-holder-rendered="true">     
+        </a>
+        <div class="carousel-caption" >
+        
+        </div>
+      </div>
+
         
         <div class="item">
-          <img style="width:100%;" data-src=alt="900x500" src="http://192.168.100.45/cyber-system/conten/img/2x1.png" data-holder-rendered="true">
+          <img style="width:100%; height: 200px;" data-src=alt="900x500" src="http://192.168.100.45/cyber-system/conten/img/2x1.png" data-holder-rendered="true">
           <div class="carousel-caption" >
             <h3 style="color:#fff;" class="mirror">TODOS LOS MIÉRCOLES</h3>
             <p style="color:red;" class="mirror">
@@ -523,15 +545,15 @@
 
 
         <div class="item">
-          <img style="width:100%;" data-src=alt="900x500" src="http://192.168.100.45/cyber-system/conten/img/SL2.png" data-holder-rendered="true">
+          <img style="width:100%; height: 200px;" data-src=alt="900x500" src="http://192.168.100.45/cyber-system/conten/img/SL2.png" data-holder-rendered="true">
           <div class="carousel-caption" >
           <br>
             <h4 class="mirror">Aquí en CYBER VISIÓN</h4>
           </div>
         </div>
 
-        <div class="item active">
-          <img style="width:100%;" data-src=alt="900x500" src="http://192.168.100.45/cyber-system/conten/img/w7.png" data-holder-rendered="true">          
+        <div class="item">
+          <img style="width:100%; height: 200px;" data-src=alt="900x500" src="http://192.168.100.45/cyber-system/conten/img/w7.png" data-holder-rendered="true">          
         </div>
 
 

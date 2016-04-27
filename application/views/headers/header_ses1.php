@@ -3,9 +3,9 @@
   
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="http://localhost/cyber-system/conten/img/ojo.png">
+  <link rel="icon" href="http://192.168.100.45/cyber-system/conten/img/ojo.png">
 
-	<title>Bienvenidos</title>
+	<title>Cyber Vision Administrador</title>
 	<!-- css -->
 	<link rel="stylesheet" type="text/css" href="http://192.168.100.45/cyber-system/conten/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="http://192.168.100.45/cyber-system/conten/bootstrap/css/bootstrap.min.css">

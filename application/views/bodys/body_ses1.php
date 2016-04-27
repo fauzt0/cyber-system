@@ -4,7 +4,7 @@
     <div class="col-sm-6 col-md-3">
       <div class="list-group">
         <a href="#" class="list-group-item active">
-          Favoritos destacados:
+         -Favoritos destacados:
         </a>
           <div id="favoritos">
           <form id="formfavoritos">
@@ -50,11 +50,11 @@
     </div>
     
 
- 
+<div id="espejo">
 
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-        <img src="http://localhost/cyber-system/conten/img/vid1.png" class="prinIma" alt="Inserta Videos">
+        <img src="http://192.168.100.45/cyber-system/conten/img/vid1.png" class="prinIma" alt="Inserta Videos">
         <div class="caption">
           <h3>Agrega multimedia</h3>
           <p>Aquí puedes agregar contenido multimedia en forma de videos
@@ -70,16 +70,14 @@
 
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-        <img src="http://localhost/cyber-system/conten/img/vid1.png" class="prinIma" alt="Inserta Videos">
+        <img src="http://192.168.100.45/cyber-system/conten/img/vid1.png" class="prinIma" alt="Inserta Videos">
         <div class="caption">
           <h3>Agrega un post</h3>
-          <p>Aquí puedes agregar contenido multimedia en forma de videos
-            que tienen fuente en YouTube o cualquier página que permita
-            insertar sus propios contenidos internos en sitios externos.
+          <p>Aquí puedes agregar contenido en forma de blog.
 
           </p>
           <p><a href="#" class="btn btn-primary" role="button">Nuevo +</a>
-           <a href="#" class="btn btn-default" role="button">Buscar Videos</a></p>
+           <a href="#" class="btn btn-default" role="button">Editar entradas</a></p>
         </div>
       </div>
     </div>
@@ -87,18 +85,29 @@
 
 
 
+
     <div class="col-sm-6 col-md-3">
-      
+      <div class="thumbnail">
+        <img src="http://192.168.100.45/cyber-system/conten/img/vid1.png" class="prinIma" alt="Inserta Videos">
+        <div class="caption">
+          <h3>Edición multimedia</h3>
+          <p>Aquí puedes editar los post multimedia previamente publicados.
+          </p>
+          <p><a href="#" class="btn btn-primary" role="button">Nuevo +</a>
+           <a href="#" class="btn btn-default" role="button">Buscar Videos</a></p>
+        </div>
+      </div>
     </div>
 
   </div>
+</div>
 
   <div class="row">
     
     <div class="col-sm-6 col-md-3">
       <div class="list-group">
         <a href="#" class="list-group-item active">
-          Contraseña WIFI:
+          -Contraseña WIFI:
         </a>
           <div id="favoritos">          
 
@@ -120,6 +129,24 @@
     </div>
     
 
+  </div>
+
+  <div class="row">
+
+  <div class="col-sm-6 col-md-3">
+      <div class="list-group">
+        <a href="#" class="list-group-item active">
+          -Control de Comentarios:
+        </a>
+          <div id="coments">                  
+            <li class="list-group-item">
+              <input type="button"  class="btn btn-default" onclick="showComents();" value="Editar comentarios">
+              <div id="mensaje_coments"></div>
+            </li>          
+          </div>
+        </div>
+    </div>
+    
   </div>
 
 </div>
