@@ -46,6 +46,9 @@ setInterval(function(){
 body
 {
 background: url('http://wallpapers.org.es/wp-content/uploads/2012/09/degradados_azules_1920x1200_127.jpeg');
+background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: center center;
 }
 ::-webkit-scrollbar{width: 3px;}
 

@@ -58,7 +58,7 @@ class Welcome extends CI_Controller {
 		$califica = $_POST["califica"];
 		$comentario = $_POST["comentario"];
 		$name = $_POST["name"];
-		$conten=$name . "||" .$comentario. "||" . $califica ;
+		$conten=$name . "||" .$comentario. "||" . $califica."/" ;
 		$file = fopen("conten/comentarios/comentarios.txt" ,"a") or die("Problemas");
 		//
 		if( fwrite($file,$conten.PHP_EOL))

@@ -50,7 +50,7 @@
     </div>
     
 
-<div id="espejo">
+<div id="espejo" >
 
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">

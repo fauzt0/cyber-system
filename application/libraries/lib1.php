@@ -29,9 +29,22 @@ class lib1 {
 
 		if($exists==true){
 			$file = fopen($fichero, "r");//abrimos el fichero con propiedades de lectura
+			$i=0;
+			 while(!feof($file)){
+     	   		$lines[$i] = fgets($file);
+     	   		$i++;
+        		//echo nl2br($traer);
+    		}
+    		
+    		$result[0] = 1;
+    		$result[1] = $lines;//
+    		
+		}else{
+			$result[0] = 0;
+			$result[1] = 0;
 		}
 
-
+		return $result;
 	}
 
 

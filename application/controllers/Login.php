@@ -57,12 +57,47 @@ class Login extends CI_Controller {
 	  	}
 	}
 
+/*
+	public function showComents(){
+		$this->load->library('lib1');		
+		$result = $this->lib1->Pluraltxtread("comentarios/comentarios");//nombre completo con carpeta contenedora
 
-	public function displayComents(){
-		$this->load->library('lib1');
-		$cadena = $this->lib1->Pluraltxtread("comentarios/comentarios");//nombre completo con carpeta contenedora
-		
+		if($result[0] == 1){//si existe el contenido
+
+			echo $result[1];
+		}else{echo "NULL";}
 	}
+*/
+
+	public function showComents(){		
+		$logged_in = $this->session->userdata('logged_in');
+		$permiso = $this->session->userdata('level');		
+		if( $logged_in== TRUE  AND($permiso==0))
+	  	{
+			$this->load->library('lib1');		
+			$result = $this->lib1->Pluraltxtread("comentarios/comentarios");//nombre completo con carpeta contenedora
+			if($result[0] == 1){//si existe el contenido							
+				//$lines = $result[1];//asignamos los arreglos a una unica variable
+				$tam = count ($result[1]);//contamos la cantidad de comentarios
+				/* echo "la cantidad de comentarios es:". $tam."<br>";
+				echo "el resultado es: <br>";
+				$i=0;//variable para imprimir coments
+				$a=1;//variable contador
+				while ( $a<= $tam) {
+					echo $lines[$i]."<br>";
+					$a++;
+					$i++;}
+				*/
+				$result[2] = $tam;
+				echo json_encode($result);
+				
+			}else{echo "NULL";}
+		}else{
+			echo "Se necesitan permisos de administracion";
+		}	
+
+	}
+
 
 
 	//fin de funciones complementarias

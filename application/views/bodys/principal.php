@@ -344,6 +344,40 @@
  <div id="center" >
 
 
+  <div class="col-sm-6 col-md-10">
+      <div class="thumbnail">        
+        <div class="caption">
+          <h3>Come vegetales | Casi Creativo</h3>          
+          <div class="embed-responsive embed-responsive-16by9">        
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7RsjJionIGI" frameborder="0"  allowfullscreen></iframe>
+          </div>
+          <p>¿Comes los suficientes vegetales al día?</p>
+          <p><a href="#" class="btn btn-primary" role="button">Continuar...</a>
+           <a href="#" class="btn btn-default" role="button">Compartir</a></p>
+        </div>
+      </div>
+    </div>
+
+
+
+  <div class="col-sm-6 col-md-10">
+      <div class="thumbnail">        
+        <div class="caption">
+          <h3>LA HERA DEL HIELO 5 (2016)</h3>          
+          <div class="embed-responsive embed-responsive-16by9">        
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3iRVGzmVoQA" frameborder="0"  allowfullscreen></iframe>
+          </div>
+          <p>
+            Ice Age 5: Collision Course es la quinta película de la saga Ice Age y gira en torno a los problemas que ocasiona Scrat. 
+          </p>
+          <p><a href="#" class="btn btn-primary" role="button">Continuar...</a>
+           <a href="#" class="btn btn-default" role="button">Compartir</a></p>
+        </div>
+      </div>
+    </div>
+
+
+
 
 
 
@@ -506,9 +540,22 @@
         <li data-target="#carousel-example-captions" data-slide-to="2" class=""></li>
         <li data-target="#carousel-example-captions" data-slide-to="3" class=""></li>
         <li data-target="#carousel-example-captions" data-slide-to="4" class=""></li>
+        <li data-target="#carousel-example-captions" data-slide-to="5" class=""></li>
         
       </ol>
       <div class="carousel-inner" role="listbox">
+      
+      
+      <div class="item active">
+        <a href="http://www.redzer.tv/2016/04/ver-en-vivo-atletico-de-madrid-vs-bayern-munich-2016-champions-league-online.html">
+          <img style="width:100%; height: 200px;" data-src=alt="900x500" src="http://192.168.100.45/cyber-system/conten/img/promo2.jpg" data-holder-rendered="true">     
+        </a>
+        <div class="carousel-caption" >
+        Partido en vivo aquí¡
+
+        </div>
+      </div>
+
 
       <div class="item">
         <a href="http://www.redzer.tv/2016/04/ver-en-vivo-real-madrid-vs-manchester-city-2016-champions-league-online.html">
@@ -519,8 +566,10 @@
         </div>
       </div>
 
-      <div class="item active">
-        <a href="http://www.redzer.tv/2016/04/ver-en-vivo-real-madrid-vs-manchester-city-2016-champions-league-online.html">
+
+
+      <div class="item ">
+        <a href="http://jkanime.net/dragon-ball-super/">
           <img style="width:100%; height: 200px;" data-src=alt="900x500" src="http://192.168.100.45/cyber-system/conten/img/dbsuper.jpeg" data-holder-rendered="true">     
         </a>
         <div class="carousel-caption" >

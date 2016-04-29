@@ -194,12 +194,57 @@ function addwifipass(){//agregas nueva contraseña
 */
 function showComents(){
 
-	$("#espejo").empty();//vaciamos el contenido principal (espejo constructor)
-	$.get('http://192.168.100.45/cyber-system/index.php/login/showComents',{
-		
-	},
+	$("#espejo").empty();//vaciamos el contenido principal (espejo constructor)	
+	$.post('http://192.168.100.45/cyber-system/index.php/login/showComents',
+	{	},
 	function(result){
+		var aray2 = JSON.parse(result);
+		switch (aray2[0]){
+			case "NULL":
+			$("#espejo").append('<div class="col-sm-6 col-md-9"><table class="table table-hover table-striped">'+
+					'<th>'+
+					'No existen comentarios'+ aray2[0]+
+					'</th>'+
+					'</table></div>'
+					);
+			
+			break;
 
+			case 1:
+			var mem  = 1;
+			var mem2 = 0;
+			var comens = aray1[1];//almaceno todos mis comentarios
+				$("#espejo").append('<div class="col-sm-6 col-md-9"><table class="table table-hover table-striped">'+
+					'<th>'+
+					'comentarios de Cyber Visión:'+
+					'</th>';
+					
+					while(mem <= aray2[2]){
+						$("#espejo").append('<tr><td>');
+						$("#espejo").append(comens[mem2]);
+						$("#espejo").append('</td></tr>');
+						mem++;
+						mem2++;
+					}
+
+
+					$("#espejo").append('</table></div>');
+					);			
+			}
+
+			break;
+
+			default:
+				$("#espejo").append('<div class="col-sm-6 col-md-9"><table class="table table-hover table-striped">'+
+					'<th>'+
+					'ERROR desconocido'+ aray2[0]+
+					'</th>'+
+					'</table></div>'
+					);							
+			break;
+
+		}
+		
 
 	});
 
