@@ -200,38 +200,29 @@ function showComents(){
 	function(result){
 		var aray2 = JSON.parse(result);
 		switch (aray2[0]){
-			case "NULL":
+			case "NULL"://sin archivo de comentarios
 			$("#espejo").append('<div class="col-sm-6 col-md-9"><table class="table table-hover table-striped">'+
 					'<th>'+
 					'No existen comentarios'+ aray2[0]+
 					'</th>'+
 					'</table></div>'
-					);
-			
+					);			
 			break;
 
-			case 1:
-			var mem  = 1;
-			var mem2 = 0;
-			var comens = aray1[1];//almaceno todos mis comentarios
-				$("#espejo").append('<div class="col-sm-6 col-md-9"><table class="table table-hover table-striped">'+
-					'<th>'+
-					'comentarios de Cyber Visión:'+
-					'</th>';
-					
-					while(mem <= aray2[2]){
-						$("#espejo").append('<tr><td>');
-						$("#espejo").append(comens[mem2]);
-						$("#espejo").append('</td></tr>');
+			case 1://llenado de comentarios
+			var mem  = 1;//contador de comentarios
+			var mem2 = 0;//puntero de primer comentario
+			var comens = aray2[1];//
+				$("#espejo").append('<div class="col-sm-6 col-md-9">'+
+					'<table  border="1" id="table_coments" class="table table-hover table-striped"'+
+					'style=" border:2px solid #000; background-color:#F2F2F2">'+
+					'<th>Comentarios de Cyber Visión:</th></table></div>');					
+					while(mem < aray2[2]){//cantidad de comentarios
+						
+						$("#table_coments").append('<tr><td>'+comens[mem2]+'</td></tr>');						
 						mem++;
 						mem2++;
 					}
-
-
-					$("#espejo").append('</table></div>');
-					);			
-			}
-
 			break;
 
 			default:
