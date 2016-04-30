@@ -201,7 +201,7 @@ function showComents(){
 		var aray2 = JSON.parse(result);
 		switch (aray2[0]){
 			case "NULL"://sin archivo de comentarios
-			$("#espejo").append('<div class="col-sm-6 col-md-9"><table class="table table-hover table-striped">'+
+			$("#espejo").append('<div class="col-sm-6 col-md-12"><table class="table table-hover table-striped">'+
 					'<th>'+
 					'No existen comentarios'+ aray2[0]+
 					'</th>'+
@@ -213,20 +213,42 @@ function showComents(){
 			var mem  = 1;//contador de comentarios
 			var mem2 = 0;//puntero de primer comentario
 			var comens = aray2[1];//
-				$("#espejo").append('<div class="col-sm-6 col-md-9">'+
+				$("#espejo").append('<div class="col-sm-6 col-md-12">'+
 					'<table  border="1" id="table_coments" class="table table-hover table-striped"'+
 					'style=" border:2px solid #000; background-color:#F2F2F2">'+
-					'<th>Comentarios de Cyber Visión:</th></table></div>');					
+					'<th colspan="3">Comentarios de Cyber Visión:</th></table></div>');					
+				
 					while(mem < aray2[2]){//cantidad de comentarios
+						var i,j=0,k=0;
+						var n = comens[mem2].length;//tamaño de la cadena por comentario
+						var ar = [];
+						for(i = 0; i <=n; i++){
+							var an = comens[mem2].charAt(i);//caracter por caracter							
+							if(an !="|" && an !="/" ){//si no es ||
+								if(k==0){
+									ar[j] = an;//inicio de fila
+									k=1;
+								}else{
+									ar[j] = ar[j] + an;
+								}								
+							}else{ //si es ||
+								k=0;
+								j++;
+								i++;
+							}
+						}
 						
-						$("#table_coments").append('<tr><td>'+comens[mem2]+'</td></tr>');						
+						
+						/*segciona los comentarios hasta encontrar una linea*/
+						//$("#table_coments").append('<tr><td>'+comens[mem2]+'</td><td>Tam:'+n+'</td></tr>');						
+						$("#table_coments").append('<tr><td>'+ar[0]+'</td><td>'+ar[1]+'</td><td>'+ar[2]+'</td></tr>');						
 						mem++;
 						mem2++;
 					}
 			break;
 
 			default:
-				$("#espejo").append('<div class="col-sm-6 col-md-9"><table class="table table-hover table-striped">'+
+				$("#espejo").append('<div class="col-sm-6 col-md-12"><table class="table table-hover table-striped">'+
 					'<th>'+
 					'ERROR desconocido'+ aray2[0]+
 					'</th>'+
