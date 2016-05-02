@@ -45,7 +45,8 @@ setInterval(function(){
   <style type="text/css">
 body
 {
-background: url('http://wallpapers.org.es/wp-content/uploads/2012/09/degradados_azules_1920x1200_127.jpeg');
+/*background: url('http://wallpapers.org.es/wp-content/uploads/2012/09/degradados_azules_1920x1200_127.jpeg');*/
+background: url('http://www.mujeresfemeninas.com/imagenes/hogar/imagenes-para-el-pin-dia-del-ni%C3%B1o-8.jpg');
 background-repeat: no-repeat;
  background-attachment: fixed;
  background-position: center center;

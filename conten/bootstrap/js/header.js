@@ -216,7 +216,7 @@ function showComents(){
 				$("#espejo").append('<div class="col-sm-6 col-md-12">'+
 					'<table  border="1" id="table_coments" class="table table-hover table-striped"'+
 					'style=" border:2px solid #000; background-color:#F2F2F2">'+
-					'<th colspan="3">Comentarios de Cyber Visión:</th></table></div>');					
+					'<th colspan="4">Comentarios de Cyber Visión:</th></table></div>');					
 				
 					while(mem < aray2[2]){//cantidad de comentarios
 						var i,j=0,k=0;
@@ -241,7 +241,12 @@ function showComents(){
 						
 						/*segciona los comentarios hasta encontrar una linea*/
 						//$("#table_coments").append('<tr><td>'+comens[mem2]+'</td><td>Tam:'+n+'</td></tr>');						
-						$("#table_coments").append('<tr><td>'+ar[0]+'</td><td>'+ar[1]+'</td><td>'+ar[2]+'</td></tr>');						
+						$("#table_coments").append('<tr><td>'+ar[0]+'</td><td>'+ar[1]+'</td><td>'+ar[2]+'</td>'+
+							'<td>'+
+								'<button type="button" class="btn btn-danger btn-sm" onclick="alert(\'eliminas coment:'+mem2+'\'); ">'+
+  								'<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Eliminar'+
+								'</button>'+
+								'</td> </tr>');						
 						mem++;
 						mem2++;
 					}
