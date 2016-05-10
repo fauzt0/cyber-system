@@ -303,7 +303,7 @@
     <!-- fin form opiniones -->
   </div>
   <!-- fin de opiniones -->
-<img style="width:100%; max-height:120px;" src="https://s1.yimg.com/bt/api/res/1.2/vceFDThEhDN.0YANfmIAkg--/YXBwaWQ9eW5ld3M7cT04NTt3PTUwMA--/http://l.yimg.com/os/publish-images/news/2014-01-02/4984c2f6-459d-4c01-b1cb-f78cc4635101_puntos-colores.gif">
+<img style="width:100%; max-height:180px;" src="http://thenextweb.com/wp-content/blogs.dir/1/files/2015/02/ctXFWZl-1.gif">
   
 
   </div>
@@ -540,7 +540,7 @@
         <li data-target="#carousel-example-captions" data-slide-to="2" class=""></li>
         <li data-target="#carousel-example-captions" data-slide-to="3" class=""></li>
         <li data-target="#carousel-example-captions" data-slide-to="4" class=""></li>
-        <li data-target="#carousel-example-captions" data-slide-to="5" class=""></li>
+        
         
       </ol>
       <div class="carousel-inner" role="listbox">
@@ -548,23 +548,16 @@
       
       <div class="item active">
         <a href="http://www.redzer.tv/2016/04/ver-en-vivo-atletico-de-madrid-vs-bayern-munich-2016-champions-league-online.html">
-          <img style="width:100%; height: 200px;" data-src=alt="900x500" src="http://192.168.100.45/cyber-system/conten/img/promo2.jpg" data-holder-rendered="true">     
+          <img style="width:100%; height: 200px;" data-src=alt="900x500" src="https://i.ytimg.com/vi/Xfy4xeWXTj8/maxresdefault.jpg" data-holder-rendered="true">     
         </a>
         <div class="carousel-caption" >
-        Partido en vivo aquí¡
+          <font color="#000#">10 de Mayo</font>
 
         </div>
       </div>
 
 
-      <div class="item">
-        <a href="http://www.redzer.tv/2016/04/ver-en-vivo-real-madrid-vs-manchester-city-2016-champions-league-online.html">
-          <img style="width:100%; height: 200px;" data-src=alt="900x500" src="http://192.168.100.45/cyber-system/conten/img/promo1.jpg" data-holder-rendered="true">     
-        </a>
-        <div class="carousel-caption" >
-        Martes 26. 2PM.
-        </div>
-      </div>
+     
 
 
 

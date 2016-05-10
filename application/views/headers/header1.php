@@ -46,30 +46,24 @@ setInterval(function(){
 body
 {
 /*background: url('http://wallpapers.org.es/wp-content/uploads/2012/09/degradados_azules_1920x1200_127.jpeg');*/
-background: url('http://www.fondox.net/wallpapers/textura-azul-y-puntos-1578.jpg');
+background: url('https://humbermedia2013.files.wordpress.com/2013/04/background-humber-blue.png');
 background-repeat: no-repeat;
  background-attachment: fixed;
  background-position: center center;
 }
-::-webkit-scrollbar{width: 3px;}
-
-::-webkit-scrollbar-thumb{background-color:rgb(50, 199, 169); border-radius: 0;}
-::-webkit-scrollbar-thumb:hover{background-color:rgb(196, 196, 196);}
-
-::-webkit-scrollbar-track{background-color:rgb(237, 237, 237);}
-
-::-webkit-scrollbar-button:vertical:decrement {background-color:rgb(114, 114, 114);} ::-webkit-scrollbar-button:vertical:decrement:hover {background-color:rgb(114, 114, 114);} 
 
 #center
 {
   width: 100%;
-  min-height: 485px;
+  height: 605px;
+  min-height: 505px;
   max-height: 605px;
   position: relative;
   overflow: auto;
-  margin-bottom: 5px;
-  border-bottom: 2px solid #FFAB00;
-  border-top: 2px solid #FFAB00;
+  margin-bottom: 40px;
+
+  /*border-bottom: 2px solid #FFAB00;
+  border-top: 2px solid #FFAB00;*/
 
 }
 
