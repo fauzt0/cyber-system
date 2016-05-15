@@ -243,7 +243,7 @@ function showComents(){
 						//$("#table_coments").append('<tr><td>'+comens[mem2]+'</td><td>Tam:'+n+'</td></tr>');						
 						$("#table_coments").append('<tr><td>'+ar[0]+'</td><td>'+ar[1]+'</td><td>'+ar[2]+'</td>'+
 							'<td>'+
-								'<button type="button" class="btn btn-danger btn-sm" onclick="alert(\'eliminas coment:'+mem2+'\'); ">'+
+								'<button type="button" class="btn btn-danger btn-sm" onclick="delComent(\''+mem2+'\');">'+
   								'<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Eliminar'+
 								'</button>'+
 								'</td> </tr>');						
@@ -264,6 +264,46 @@ function showComents(){
 		}
 		
 
+	});
+
+}
+
+
+function delComent(coment)//recibe como parametro el numero de comentario a eliminar
+{
+	/*Para eliminar un comentario mandamos como parametro
+		el numero de linea donde se almacena el comentario,
+		si el resultado es el desado por medio de ajax se
+		actualiza la tabla sin el comentario eliminado
+	*/
+	.$post('http://192.168.100.45/cyber-system/index.php/login/delComent',
+		{
+			'coment':coment
+		},
+		function(result){
+
+			switch(result){
+				case "-1":
+					$("#mensajesUp").empty();
+					$("#mensajesUp").append('<div class="alert alert-danger" role="alert">Error desconocido: '+result+'</div>');
+					
+				break;
+
+				case "1":
+				break;
+
+				case "2":
+				break;
+				
+				
+
+				default:
+					$("#mensajesUp").empty();
+					$("#mensajesUp").append('<div class="alert alert-danger" role="alert">Error desconocido: '+result+'</div>');
+					
+				break;
+
+			}
 	});
 
 }

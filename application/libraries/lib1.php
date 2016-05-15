@@ -47,6 +47,51 @@ class lib1 {
 		return $result;
 	}
 
+	/*############
+		-funcion para eliminar contenido de un txt
+		//recibe el numero de las lineas a eliminar,
+		//y la ruta del archivo a eliminar
+		//elimina lina por linea, por lo cual solo recibe una, 
+		pero reacomoda el resto
+
+	*/
+	public function oneLinedel($params){
+		extract($params);//coment, ruta
+		$fichero = "conten/".$txtname.".txt";//ruta completa del fichero
+		$exists = file_exists($fichero);//true or false
+
+		if($exists==true){//si el fichero en la ruta existe
+
+			/*Eliminamos el contenido*/			
+			$file = fopen($fichero, "rw");//abrimos el fichero 
+			$i=0;//contador inicial de linea			
+			$m=0;
+			/*
+				metemos todo el contenido en un
+				array ecepto la linea deseada,
+				posteriormente se vuelve a escribir
+			*/
+			while(!feof($file)){
+				if($i != $coment){//no se incluye el comentario
+					$lines[$i] = fgets($file);     	   			
+					$i++;	
+				}					
+			}
+
+			//se reescribe el array en el txt
+			for($m=0; $m<=$i; $m++){
+				fwrite($file,$lines[$m]. PHP_EOL);//escribimos la nueva contraseña				
+			}
+			
+				fclose($file);
+
+			return 1;
+
+		}else{
+			return -1;//no existe
+		}
+
+	}
 
 
 }

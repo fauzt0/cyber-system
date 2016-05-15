@@ -89,6 +89,7 @@
    <!-- insercion2 -->
    <div class="col-sm-6 col-md-8" style="max-height:655px; overflow: auto; position: relative; "> 
 
+<div id="mensajesUp"></div>
 <div id="espejo" >
       <div class="col-sm-6 col-md-5">
         <div class="thumbnail">

@@ -98,6 +98,37 @@ class Login extends CI_Controller {
 
 	}
 
+/*Funcion que elimina un comentario determinado*/
+public function delComent(){
+
+	$logged_in = $this->session->userdata('logged_in');
+		$permiso = $this->session->userdata('level');		
+		if( $logged_in== TRUE  AND($permiso<=1))
+	  	{	
+	  		$coment = $_POST["coment"];//recibimos comentario
+	  		if(isset($coment)){
+	  			$params["coment"] 	= $coment;
+	  			$params["ruta"] 	= "comentarios/comentarios";
+	  			$this->load->library('lib1');
+	  			$result = $this->lib1->oneLinedel($params);
+
+	  			echo $result;
+
+	  		}else{
+	  			echo 2;//error 3, no se recibio comentario alguno
+	  		}
+
+
+	  	}else{
+			echo "Se necesitan permisos de administracion";
+		}
+
+}
+/* Fin de uncion que elimina un comentario determinado*/
+
+
+
+
 
 
 	//fin de funciones complementarias
